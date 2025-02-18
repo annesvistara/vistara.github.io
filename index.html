@@ -1,0 +1,387 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISTARA</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Bootstrap JS (for toggler) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <img src="{% static 'images/logo-removebg-preview.png' %}" width="100" height="40"
+                class="d-inline-block align-top" alt="">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Events
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <b>ON STAGE EVENTS</b>
+                            <a class="dropdown-item" href="{% url 'know1' %}">Free Style Dance</a>
+                            <a class="dropdown-item" href="{% url 'know2' %}">Duet Dance</a>
+                            <a class="dropdown-item" href="{% url 'know3' %}">Group Dance</a>
+                            <a class="dropdown-item" href="{% url 'know4' %}">Fashion Show</a>
+                            <a class="dropdown-item" href="{% url 'know5' %}">Stand Up Comedy </a>
+                            <div class="dropdown-divider"></div>
+                            <b>OFF STAGE EVENTS</b>
+                            <a class="dropdown-item" href="{% url 'know6' %}">Solo Singing</a>
+                            <a class="dropdown-item" href="{% url 'know8' %}">Group Singing</a>
+                            <a class="dropdown-item" href="{% url 'know9' %}">Mehendi</a>
+                            <a class="dropdown-item" href="{% url 'know12' %}">Face Painting</a>
+                            <a class="dropdown-item" href="{% url 'know11' %}">Collage</a>
+                            <a class="dropdown-item" href="{% url 'know15' %}">Sketching</a>
+                            <a class="dropdown-item" href="{% url 'know14' %}">T-Shirt Painting</a>
+                            <a class="dropdown-item" href="{% url 'know16' %}">Pot Painting</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <button class="download-button" onclick="openPdf()">
+                            <span1></span1>Brochure
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <script>
+            function openPdf() {
+                // Use the correct static path and open the PDF in a new tab
+                window.open("{% static 'pdf/bro.pdf' %}", "_blank");
+            }
+        </script>
+
+    </section>
+
+
+
+    <div class="video-background">
+        <video autoplay muted loop class="bg-video">
+            <source src="{% static 'video/mg1.mp4' %}" type="video/mp4">
+        </video>
+    </div>
+    <div class="paralla">
+        <style>
+            .paralla {
+                background-image: url("{% static 'images/img34.jpg' %}");
+                height: 300px;
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        </style>
+    </div>
+    <div id="about">
+        <style>
+            #about {
+                background-image: url("{% static 'images/16.jpg' %}");
+                background-size: cover;
+                /* Ensure the image covers the container */
+                background-position: center;
+                /* Center the image */
+                background-repeat: no-repeat;
+                height: 35vh;
+                padding: 5px 5px 5px 5px;
+                /* Adjust for larger screens */
+            }
+        </style>
+        <h1>About</h1>
+        <p>Vistara can represent the unlimited potential that lies within
+            each individual, waiting to be tapped and explored. The word
+            Vistara can also evoke a sense of exploration and discovery,
+            representing the thrill of venturing into the unknown and
+            uncovering new experiences. In some contexts, Vistara can
+            symbolize freedom and liberation, representing the breaking
+            free from constraints and limitations. In a cosmological sense,
+            Vistara can represent the expansion of the universe itself,
+            symbolizing the ever-growing and evolving nature of existence.
+            On a personal level, Vistara can represent inner growth and
+            self-expansion, symbolizing the journey of self-discovery and
+            self-realization. The word Vistara can also represent the
+            interconnectedness of all things, symbolizing the idea that
+            everything in the universe is linked and intertwined. Finally,
+            Vistara can represent evolution and transformation,
+            symbolizing the idea that change and growth are an inherent
+            part of life
+        </p>
+    </div>
+
+    <script>
+        window.onload = function () {
+            // Display the prompt when the page loads
+            var userResponse = confirm('To register and to Know more information about the event move your cursor over the image. Type "OK" if you understand!');
+        };
+    </script>
+
+
+    <div class="main-heading">
+        <style>
+            .main-heading {
+                /* Allows the containers to wrap */
+                justify-content: space-between;
+                background-image: url("{% static 'images/o.jpg' %}");
+            }
+        </style>
+        <h2>EVENTS</h2>
+        <style>
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                /* Allows the containers to wrap */
+                justify-content: space-between;
+                background-image: url("{% static 'images/R (1).jpeg' %}");
+            }
+        </style>
+        <div class="container">
+            <div class="image-container">
+                <img src="{% static 'images/img1.png' %}" alt="Image 1" class="image">
+                <div class="overlay">
+                    <h3 class="overlay-header">Free Style Dance </h3>
+                    <button class="reg1" onclick="window.location.href='https://forms.gle/1u6YdkbAG9WeBaWUA'">
+                        <span1></span1>Register
+                    </button>
+                    <button class="know1" onclick="window.location.href='/know1/';">
+                        <span1></span1>Know More
+                    </button>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/img2.jpg' %}" alt="Image 1" class="image">
+                <div class="overlay">
+                    <h3 class="overlay-header">Duet Dance</h3>
+                    <button class="reg1" onclick="window.location.href='https://forms.gle/9ip6uWHewfcQwyxb9'">
+                        <span1></span1>Register
+                    </button>
+                    <button class="know1" onclick="window.location.href='/know2/';">
+                        <span1></span1>Know More
+                    </button>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/img3.jpeg' %}" alt="Image 1" class="image">
+                <div class="overlay">
+                    <h3 class="overlay-header">Group Dance</h3>
+                    <button class="reg1" onclick="window.location.href='https://forms.gle/ZJ17FDGkQh647Hb48'">
+                        <span1></span1>Register
+                    </button>
+                    <button class="know1" onclick="window.location.href='/know3/'">
+                        <span1></span1>Know More
+                    </button>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/img4.jpeg' %}" alt="Image 1" class="image">
+                <div class="overlay">
+                    <h3 class="overlay-header">Fashion show </h3>
+                    <button class="reg1" onclick="window.location.href='https://forms.gle/13JLzTkmwKFrgmuJ8'">
+                        <span1></span1>Register
+                    </button>
+                    <button class="know1" onclick="window.location.href='/know4/'">
+                        <span1></span1>Know More
+                    </button>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/st.png' %}" alt="Image 1" class="image">
+                <div class="overlay">
+                    <h3 class="overlay-header">Stand Up Comedy </h3>
+                    <button class="reg1" onclick="window.location.href='https://forms.gle/wQVMQc2RGWYowk3B8'">
+                        <span1></span1>Register
+                    </button>
+                    <button class="know1" onclick="window.location.href='/know5/'">
+                        <span1></span1>Know More
+                    </button>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/img6.jpg' %}" alt="Image 1" class="image">
+                <div class="overlay">
+                    <h3 class="overlay-header">Solo Singing</h3>
+                    <button class="reg1" onclick="window.location.href='https://forms.gle/c3SioGG8mGYGhwYS7'">
+                        <span1></span1>Register
+                    </button>
+                    <button class="know1" onclick="window.location.href='/know6/'">
+                        <span1></span1>Know More
+                    </button>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/TT.webp' %}" alt="Image 1" class="image">
+                <div class="overlay">
+                    <h3 class="overlay-header">Group Singing</h3>
+                    <button class="reg1" onclick="window.location.href='https://forms.gle/JZgrUhTCFXoq5oL39'">
+                        <span1></span1>Register
+                    </button>
+                    <button class="know1" onclick="window.location.href='/know8/'">
+                        <span1></span1>Know More
+                    </button>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/m.jpg' %}" alt="Image 1" class="image">
+                <div class="overlay">
+                    <h3 class="overlay-header">Mehendi</h3>
+                    <button class="reg1" onclick="window.location.href='https://forms.gle/2HAXYTKiVqs7jKZV7'">
+                        <span1></span1>Register
+                    </button>
+                    <button class="know1" onclick="window.location.href='/know9/'">
+                        <span1></span1>Know More
+                    </button>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/c2.png' %}" alt="Image 1" class="image">
+                <div class="overlay">
+                    <h3 class="overlay-header">Collage</h3>
+                    <button class="reg1" onclick="window.location.href='https://forms.gle/V8aFg5CywTMEAKeU6'">
+                        <span1></span1>Register
+                    </button>
+                    <button class="know1" onclick="window.location.href='/know11/'">
+                        <span1></span1>Know More
+                    </button>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/OIP.jpeg' %}" alt="Image 1" class="image">
+                <div class="overlay">
+                    <h3 class="overlay-header">Face Painting</h3>
+                    <button class="reg1" onclick="window.location.href='https://forms.gle/82HHzFx5gGjb81bc9'">
+                        <span1></span1>Register
+                    </button>
+                    <button class="know1" onclick="window.location.href='/know12/'">
+                        <span1></span1>Know More
+                    </button>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/ttt.png' %}" alt="Image 1" class="image">
+                <div class="overlay">
+                    <h3 class="overlay-header">T-shirt painting</h3>
+                    <button class="reg1" onclick="window.location.href='https://forms.gle/DVfv49tp3hYwgYZR9'">
+                        <span1></span1>Register
+                    </button>
+                    <button class="know1" onclick="window.location.href='/know14/'">
+                        <span1></span1>Know More
+                    </button>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/s (2).png' %}" alt="Image 1" class="image">
+                <div class="overlay">
+                    <h3 class="overlay-header">Sketching</h3>
+                    <button class="reg1" onclick="window.location.href='https://forms.gle/9fKHDkJEPEnJmZh67'">
+                        <span1></span1>Register
+                    </button>
+                    <button class="know1" onclick="window.location.href='/know15/'">
+                        <span1></span1>Know More
+                    </button>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/Screenshot 2024-12-16 124005.png' %}" alt="Image 1" class="image">
+                <div class="overlay">
+                    <h3 class="overlay-header">Pot Painting</h3>
+                    <button class="reg1" onclick="window.location.href='https://forms.gle/b5qVtTdfBHDG9u5x9'">
+                        <span1></span1>Register
+                    </button>
+                    <button class="know1" onclick="window.location.href='/know16/'">
+                        <span1></span1>Know More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="parallax">
+        <style>
+            .parallax {
+                background-image: url("{% static 'images/o.jpg' %}");
+                /* Change to your image */
+                height: 200px;
+                /* Set the height you want for the parallax section */
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+            }
+        </style>
+        <div class="countdown" id="countdown"></div>
+    </div>
+
+    <!-- Contact and Map Section-->
+    <div class="contact-container">
+        <style>
+            .contact-container {
+                display: flex;
+                justify-content: space-between;
+                margin: 10px;
+                background-image:url("{% static 'images/hello.jpg' %}");
+            }
+        </style>
+        <div class="contact-details">
+            <h5>STUDENT CO-ORDINATOR'S</h5>
+            <p>Mehdee Khanum:<a href="tel:++919148925063">+919148925063</a></p>
+            <p>Lahari.D:<a href="tel:+919164391399">+919164391399</a></p>
+            <p>Bhavanisha.K:<a href="tel:+919738915751">+919738915751</a></p>
+        </div>
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2593.745656345036!2d77.58972274828079!3d12.988396454854318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16698d3761c1%3A0xe2f6393358679b12!2sSt%20Anne&#39;s%20First%20Grade%20College%20For%20Women!5e0!3m2!1sen!2sin!4v1714552513029!5m2!1sen!2sin"
+                width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+    <div class="cent">
+        <style>
+            .cent {
+                text-align: center;
+                color: aqua;
+                background-image: url("{% static 'images/12.webp' %}");
+                /* Change to your desired color */
+                padding: 10px;
+                margin: 5px;
+                /* Space around the paragraph */
+                border-radius: 8px;
+                /* Rounded corners for the paragraph */
+            }
+        </style>
+        <p>Designed and Developed By Rabecca.S (Media Secretary)</p>
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+
+</html>
