@@ -1,0 +1,751 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: "Platypi", serif;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    /* Position it at the top of the viewport */
+    left: 0;
+    width: 100%;
+    /* Make header full width */
+    z-index: 2;
+}
+
+.logo {
+    font-size: 29px;
+}
+
+#nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    background-color: rgb(14, 26, 27);
+}
+
+.navbar-nav li {
+    padding: 0 20px;
+}
+
+.navbar-nav li a {
+    color: rgb(205, 4, 255) !important;
+    font-weight: 550;
+
+}
+
+.navbar li:hover {
+    transform: translateY(-5px);
+}
+
+.navbar li:hover a {
+    background-color: rgba(165, 224, 182, 0.245);
+    color: rgb(221, 232, 233);
+
+}
+
+.nav-item dropdown.dropdown-item {
+    padding: 10px 30px;
+    color: black;
+}
+
+
+.navbar-toggler {
+    outline: none !important;
+}
+
+
+.download-button {
+    color: #fbf8f0;
+    padding: 5px 10px;
+    /* Smaller button size */
+}
+
+.video-background {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bg-video {
+    position: absolute;
+    background-size: cover;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+}
+
+.paralla {
+    background-image: url("img34.jpg");
+    /* Change to your image */
+    height: 300px;
+    /* Set the height you want for the parallax section */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-heading {
+    text-align: center;
+    /* Center the heading */
+    font-size: 2em;
+    /* Set the font size */
+    color: #e74c3c;
+    /* Color matching your theme */
+    margin: 0;
+    /* Remove margin to eliminate space */
+    padding: 20px 0;
+    /* Optional: Add some padding if desired */
+    font-family: "Platypi", serif;
+    background-color: black;
+}
+
+.h2 {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows the containers to wrap */
+    justify-content: space-between;
+    background-image: URL("{% static 'images/o.jpg' %}");
+}
+
+.image-container {
+    position: relative;
+    width: 350px;
+    /* Fixed width */
+    height: 280px;
+    /* Fixed height */
+    margin-bottom: 10px;
+    /* Space between rows */
+    overflow: hidden;
+    clip-path: polygon(0 10%, 20% 0, 80% 0, 100% 10%, 100% 90%, 80% 100%, 20% 100%, 0 90%);
+    transition: transform 0.3s ease;
+    margin: 30px 30px 50px 40px;
+    /*border: 2px solid black;  Black border for the image container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Black shadow for the image container */
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+}
+
+
+@media screen and (max-width: 768px) {
+    .image-container {
+        width: 100%;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .image-container {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    /* Dark overlay */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+    /* Show overlay on hover */
+}
+
+.overlay-header {
+    color: white;
+    margin-bottom: 15px;
+}
+
+button {
+    width: 150px;
+    cursor: pointer;
+    color: white;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    border: 2px solid #c800ff;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+span1 {
+    background: #b300ff;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span1 {
+    width: 100%;
+    /*  background-color: #e64a19; /* Darker shade on hover */
+    /* transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.button:hover {
+    border: none;
+}
+
+.reg1 {
+    position: relative;
+    z-index: 3;
+}
+
+.know1 {
+    position: relative;
+    z-index: 3;
+}
+
+.download-button {
+    color: rgb(255, 251, 244);
+    width: 100px;
+    position: relative;
+    z-index: 3;
+}
+
+
+.parallax {
+    background-image: url("img01.jpg");
+    /* Change to your image */
+    height: 200px;
+    /* Set the height you want for the parallax section */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+@media screen and (max-width: 768px) {
+    .parallax {
+        height: 150px;
+        /* Smaller height for tablets */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .parallax {
+        height: 100px;
+        /* Even smaller height on mobile */
+    }
+}
+
+.countdown {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 5em;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    width: auto;
+}
+
+
+/* Make the background image responsive */
+#about {
+    background-image: url("{% static 'images/16.jpg' %}");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 35vh;
+    padding: 5px 5px 5px 5px;
+    min-height: 30vh; /* Allow container to expand as needed */
+}
+
+/* Heading and paragraph styles */
+#about h1 {
+    text-align: center;
+    color: rgba(11, 7, 203, 0.433);
+    font-size: 2.5em;
+    /* Adjust font size */
+    margin-top: 0px;
+}
+
+#about p {
+    text-align: center;
+    color: black;
+    font-size: 1.2em;
+    /* Adjust font size */
+    padding: 0 15px;
+    /* Padding for some space on smaller screens */
+    margin-top: 10px;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    #about {
+        min-height: 39vh;
+        height: 200vh;
+        /* Increase height for mobile */
+    }
+
+    #about h1 {
+        font-size: 1.5em;
+        /* Reduce heading size on mobile */
+    }
+
+    #about p {
+        font-size: 0.8em;
+        /* Reduce font size for paragraph */
+        padding: 0 10px;
+        /* Reduce padding */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #about {
+        height: 90vh;
+        /* Increase height on small devices */
+    }
+
+    #about h1 {
+        font-size: 1em;
+        /* Further reduce heading size */
+    }
+
+    #about p {
+        font-size: 0.5em;
+        /* Further reduce paragraph size */
+        padding: 0 10px 5px 5px;
+        /* Maintain padding */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .countdown {
+        font-size: 3em;
+        /* Smaller font size on tablets */
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .countdown {
+        font-size: 3.5em;
+        padding: 10px;
+    }
+}
+
+.contact-details {
+    width: 50%;
+    /* Adjust the width as necessary */
+    padding: 40px;
+    font-size: medium;
+}
+
+.contact-details h5 {
+    margin-bottom: 10px;
+    /* Space between heading and details */
+    font-size: x-large;
+}
+
+.cent {
+    text-align: center;
+    background-image: url("..images/img34.jpg/");
+    /* Change to your desired color */
+    padding: 10px;
+    margin: 5px;
+    /* Space around the paragraph */
+    border-radius: 8px;
+    /* Rounded corners for the paragraph */
+}
+
+
+.map-container {
+    width: 45%;
+}
+
+.map-container {
+    border: 0;
+    width: 100%;
+    height: 250px;
+    margin-left: 80px;
+    padding: 7px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .video-background {
+        height: 50vh;
+        /* Make it fullscreen */
+    }
+
+    .bg-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* Ensure the video covers the container */
+    }
+
+    .main-heading {
+        font-size: 1.5em;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container {
+        width: 80%;
+        max-width: 100%;
+    }
+
+    .navbar-nav li {
+        padding: 10px;
+    }
+
+    .navbar {
+        font-size: 14px;
+    }
+
+    .download-button {
+        font-size: 14px;
+    }
+
+    .map-container {
+        width: 55px;
+        margin-right: auto;
+        padding: 70px 10px 20px 10px;
+    }
+
+    .map-container iframe {
+        width: 140px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-heading {
+        font-size: 1.2em;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .image-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .navbar-nav li {
+        padding: 8px;
+    }
+
+}
+
+/* Tablet and larger screens (min-width: 768px) */
+@media (min-width: 768px) {
+    .contact-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .contact-details {
+        width: 48%;
+        margin-bottom: 0;
+    }
+
+    .map-container {
+        width: 48%;
+    }
+
+    .contact-details h5 {
+        font-size: 0.2;
+    }
+
+    .contact-details p {
+        font-size: 0.5em;
+    }
+
+    .map-container iframe {
+        height: 250px;
+        /* Slightly larger for better visibility */
+    }
+}
+
+/* Desktop screens (min-width: 1024px) */
+@media (min-width: 1024px) {
+    .contact-container {
+        padding: 40px;
+        justify-content: space-between;
+    }
+
+    .contact-details h5 {
+        font-size: 1em;
+    }
+
+    .contact-details p {
+        font-size: 1em;
+    }
+
+    .map-container iframe {
+        height: 200px;
+        /* Larger map for desktop views */
+    }
+}
+
+@media screen and (max-width: 738.40px) {
+
+    /* About Section */
+    #about {
+        height: 25vh;
+        padding: 20px ;
+    }
+
+    #about h1 {
+        font-size: 1em; /* Adjusting h1 font size for smaller screens */
+    }
+
+    #about p {
+        font-size: 1em; /* Adjusting paragraph font size */
+        width: 90%; /* Ensuring the text fits well on mobile */
+    }
+
+    /* Contact and Map Section Adjustments */
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .contact-details {
+        width: 80%; /* Increase width for mobile */
+        font-size: 0.9em; /* Smaller font size */
+    }
+
+    .contact-details h5 {
+        font-size: 1.1em; /* Smaller heading for mobile */
+    }
+
+    .map-container {
+        width: 80%; /* Smaller map size */
+        height: 200px; /* Adjust map height */
+        margin-top: 20px;
+    }
+
+    /* Container for Events */
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container {
+        width: 80%; /* Make images take more space */
+        margin-bottom: 20px; /* Add space between images */
+    }
+
+    /* Main Heading Styling */
+    .main-heading h2 {
+        font-size: 2em; /* Smaller main heading for mobile */
+    }
+
+    /* Parallax Section */
+    .paralla {
+        height: 250px; /* Adjust parallax height for mobile */
+    }
+
+    /* Video Background Adjustments */
+    .video-background {
+        position: relative;
+    }
+
+    .bg-video {
+        width: 100%;
+        height: 200px; /* Limit the video height */
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    /* Further adjust for very small screens */
+    #about {
+        padding: 20px 5px 5px 5px;
+    }
+    #about h1 {
+        font-size: 2.5em;
+    }
+
+    #about p {
+        font-size: 0.9em;
+    }
+
+    .contact-details {
+        width: 90%;
+    }
+
+    .contact-details h5 {
+        font-size: 1.5em;
+    }
+
+    .map-container {
+        width: 90%;
+        height: 180px;
+    }
+
+    .image-container {
+        width: 100%;
+    }
+
+    .main-heading h2 {
+        font-size: 1.8em;
+    }
+
+    .paralla {
+        height: 200px;
+    }
+
+    .bg-video {
+        height: 150px;
+    }
+}
+
+@media only screen and (max-width: 738px) and (min-width: 360px) {
+    /* Adjust the height of about section */
+    #about {
+        height: 55vh;
+    }
+
+    /* Adjust the container for images and event sections */
+    .container {
+        flex-direction: column;
+        align-items: center;
+        background-image: none;
+    }
+
+    /* Adjust image container sizes */
+    .image-container {
+        width: 100%;
+        margin: 10px 0;
+        height: 250px; 
+        padding: 30px; /* This will add space inside the container */
+    }
+
+    .image {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Adjust text size for countdown */
+    .countdown {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    /* Reduce map size */
+    .map-container iframe {
+        width: 200px;
+        height: 100px;
+    }
+
+    /* Reduce contact details font size */
+    .contact-details h5 {
+        font-size: 16px;
+    }
+
+    .contact-details p {
+        font-size: 15px;
+    }
+
+    /* Make the student coordinator section more compact */
+    .contact-details {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    /* Smaller background image in the countdown section */
+    .parallax {
+        background-size: contain;
+        height: 150px;
+    }
+
+    /* Adjust about section padding */
+    #about p {
+        font-size: 10.5px;
+        line-height: 1.5;
+        margin-top: 10px;
+        padding: 5px;
+    }
+
+    /* Decrease the size of the footer text */
+    .cent p {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    /* Reduce the size of the 'Student Coordinators' section */
+    .contact-details {
+        font-size: 65px;
+    }
+
+    /* Ensure the video and background images do not overflow */
+    .video-background, .paralla {
+        height: 100%;
+    }
+
+    /* Ensuring that the container remains within bounds */
+    .main-heading, .container, .parallax {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .video-background {
+        object-fit: cover;
+        height: 300px;
+    }
+}

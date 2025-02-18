@@ -1,0 +1,460 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: "Platypi", serif;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.logo {
+    font-size: 29px;
+}
+
+#nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    background-color: rgb(14, 26, 27);
+}
+
+.navbar-nav li {
+    padding: 0 20px;
+}
+
+.navbar-nav li a {
+    color: rgb(191, 28, 231) !important;
+    font-weight: 550;
+
+}
+
+.navbar li:hover {
+    transform: translateY(-5px);
+}
+
+.navbar li:hover a {
+    background-color: rgba(165, 224, 182, 0.245);
+    color: rgb(221, 232, 233);
+
+}
+
+.nav-item dropdown.dropdown-item {
+    padding: 10px 30px;
+    color: black;
+}
+
+
+.navbar-toggler {
+    outline: none !important;
+}
+
+.download-button {
+    color: #ffffff;
+    padding: 5px 10px;
+}
+
+.download-button {
+    color: white;
+    width: 100px;
+    position: relative;
+    z-index: 3;
+}
+
+button {
+    width: 150px;
+    cursor: pointer;
+    color: white;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    border: 2px solid #dd00ff;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+span1 {
+    background: #660096;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span1 {
+    width: 100%;
+}
+
+.button:hover {
+    border: none;
+}
+
+
+.about-us-heading h1 {
+    text-align: center;
+    font-size: 3em;
+    margin: 20px 0;
+}
+
+
+.about-us-heading p {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+
+.about-us-para {
+    margin: 0 auto;
+    max-width: 800px;
+    background-color: rgba(192, 99, 238, 0.47);
+    color: rgb(13, 12, 12);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 800px;
+}
+
+.about-us-para h2 {
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.about-us-para ol {
+    margin: 0;
+}
+
+
+.about-us-para ol {
+    padding-left: 40px;
+    list-style-type: none;
+}
+
+
+.about-us-para ol li::before {
+    content: '• ';
+    color: rgba(6, 24, 25, 0.5);
+    font-weight: bold;
+}
+
+
+.about-us-para ol li {
+    margin-bottom: 10px;
+
+}
+
+.container h4 {
+    margin: 20px 0;
+}
+
+
+.contact-container {
+    margin: 40px 0;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    background-color: #08f1de;
+}
+
+.contact-details {
+    width: 50%;
+    padding: 40px;
+    font-size: medium;
+}
+
+.contact-details h5 {
+    margin-bottom: 10px;
+    font-size: larger;
+}
+
+.cent {
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+    background-color: #0ff9dd;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 8px;/
+}
+
+.map-container {
+    width: 45%;
+}
+
+.map-container {
+    border: 0;
+    width: 100%;
+    height: 250px;
+    margin-left: 80px;
+    padding: 7px;
+}
+
+.parallax {
+    background-image: url("img34.jpg");
+    height: 200px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    justify-content: center;
+    /* Center items vertically */
+    align-items: center;
+    /* Center items horizontally */
+}
+
+h4 {
+    color: white;
+    font-size: 2.5em;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0px;
+    border-radius: 10px;
+    margin: 0;
+    /* Remove margin to control spacing */
+}
+
+.countdown {
+    color: white;
+    /* Change text color */
+    font-size: 2.5em;
+    /* Adjust font size */
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    /* Optional: semi-transparent background */
+    padding: 20px;
+    /* Optional: padding for the text */
+    border-radius: 10px;
+    /* Optional: rounded corners */
+    margin-top: 10px;
+    /* Space between h4 and countdown */
+}
+
+.tt {
+    background-color: #c999f8;
+}
+
+.tf {
+    background-color: rgba(187, 99, 238, 0.47);
+}
+
+.tfs {
+    background-color: #a840d5;
+}
+
+.event-flex {
+    position: relative;
+    height: 750px;
+    overflow: hidden;
+}
+
+.bg-video {
+    position: absolute;
+    /* Ensure the video stays in place */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* Make it fill the whole height of the viewport */
+    object-fit: cover;
+    /* Ensure the video covers the entire area without stretching */
+    object-position: top center;
+    /* Align video to the top */
+    z-index: -1;
+    /* Keep the video in the background */
+}
+
+.table-responsive {
+    margin: 20px 0;
+}
+
+.table {
+    width: 100%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #cc60f7;
+}
+
+/* Mobile responsive styles for the navbar */
+@media (max-width: 768px) {
+    .navbar-nav {
+        display: block;
+    }
+
+    .navbar-nav li {
+        padding: 15px 0;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .map-container iframe {
+        height: 200px;
+    }
+
+    .about-us-heading h1 {
+        font-size: 1.8em;
+    }
+
+    .about-us-heading p {
+        font-size: 1.1em;
+    }
+
+    .about-us-para {
+        padding: 15px;
+        width: 90%;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        /* For smooth scrolling in supported browsers */
+    }
+
+    .contact-details {
+        padding: 20px;
+    }
+
+    .cent {
+        font-size: 1.1em;
+    }
+
+    .parallax {
+        height: 250px;
+    }
+
+    .countdown {
+        font-size: 2em;
+    }
+
+    h4 {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 768px) {
+    .event-flex {
+        height: 50vh;
+        /* Make it fullscreen */
+    }
+
+    .bg-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* Ensure the video covers the container */
+    }
+}
+
+/* Tablet and larger screens (min-width: 768px) */
+@media (min-width: 768px) {
+    .contact-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .contact-details {
+        width: 48%;
+        margin-bottom: 0;
+    }
+
+    .map-container {
+        width: 48%;
+    }
+
+    .contact-details h5 {
+        font-size: 0.2;
+    }
+
+    .contact-details p {
+        font-size: 0.5em;
+    }
+
+    .map-container iframe {
+        height: 250px;
+        /* Slightly larger for better visibility */
+    }
+}
+
+/* Desktop screens (min-width: 1024px) */
+@media (min-width: 1024px) {
+    .contact-container {
+        padding: 40px;
+        justify-content: space-between;
+    }
+
+    .contact-details h5 {
+        font-size: 1em;
+    }
+
+    .contact-details p {
+        font-size: 1em;
+    }
+
+    .map-container iframe {
+        height: 200px;
+        /* Larger map for desktop views */
+    }
+}
+
+@media only screen and (max-width: 738px) and (min-width: 360px) {
+
+    /* Ensure the video fits correctly */
+    .bg-video {
+        width: 100%;
+        height: 230px;
+        min-height: 30vh;
+        object-position: center center;
+    }
+
+    .map-container iframe {
+        width: 200px;
+        height: 230px;
+    }
+
+    .about-us-heading {
+        position: absolute;
+        top: 300px;
+        /* Align it to the top of the viewport */
+        left: 0;
+        text-align: center;
+    }
+
+}
