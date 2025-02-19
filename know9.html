@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kala</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/knows9.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <img src="{% static 'images/logo-removebg-preview.png' %}" width="100" height="40" class="d-inline-block align-top" alt="">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'index' %}">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Events
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <b>ON STAGE EVENTS</b>
+                            <a class="dropdown-item" href="{% url 'know1' %}">Free Style Dance</a>
+                            <a class="dropdown-item" href="{% url 'know2' %}">Duet Dance</a>
+                            <a class="dropdown-item" href="{% url 'know3' %}">Group Dance</a>
+                            <a class="dropdown-item" href="{% url 'know4' %}">Fashion Show</a>
+                            <a class="dropdown-item" href="{% url 'know5' %}">Stand Up Comedy</a>
+                            <div class="dropdown-divider"></div>
+                            <b>OFF STAGE EVENTS</b>
+                            <a class="dropdown-item" href="{% url 'know6' %}">Solo Singing</a>
+                            <a class="dropdown-item" href="{% url 'know8' %}">Group Singing</a>
+                            <a class="dropdown-item" href="{% url 'know9' %}">Mehendi</a>
+                            <a class="dropdown-item" href="{% url 'know12' %}">Face Painting</a>
+                            <a class="dropdown-item" href="{% url 'know11' %}">Collage</a>
+                            <a class="dropdown-item" href="{% url 'know15' %}">Sketching</a>
+                            <a class="dropdown-item" href="{% url 'know14' %}">T-Shirt Painting</a>
+                            <a class="dropdown-item" href="{% url 'know16' %}">Pot Painting</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <button class="download-button" onclick="openPdf()">
+                            <span1></span1>Brochure
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <script>
+            function openPdf() {
+                // Use the correct static path and open the PDF in a new tab
+                window.open("{% static 'pdf/bro.pdf' %}", "_blank");
+            }
+        </script>
+
+    </section>
+
+
+    <div class="main">
+        <!--Event 1 poster making-->
+        <section id="content">
+            <div class="event-flex">
+                <video autoplay muted loop class="bg-video">
+                   <source src="{% static 'video/m.mp4' %}" type="video/mp4">
+                </video>
+
+            </div>
+            <div class="about-us-heading">
+                <h1>DESI MAGIC</h1>
+                <p> Mehendi is not just a design, it's a reflection of beauty, tradition, and love, all wrapped in a delicate swirl. <br> </p>
+            </div>
+    </div>
+
+    <div class="about-us-para">
+        <h2> EVENT GUIDELINES </h2>
+        <ol>
+            <li> Registration Fee : Rs. 150 </li>
+            <li> Time Limit :1 HOUR. </li>
+            <li> Event Type: Individual event with a model. </li>
+            <li> Mehendi should be applied on half hand in the front on both the hands. </li>
+            <li> No Arabic designs are allowed. </li>
+            <li> Only the participant will receive the prize, not the model. </li>
+            <li> No applying mehendi prior to the event. </li>
+            <li> Participants once registered cannot back out from the event. </li>
+            <li> TIME : 12:30 p.m. to 01:30 p.m. </li>
+            <li> VENUE : D13 (BBA Basement)</li>
+            <a href="https://forms.gle/2HAXYTKiVqs7jKZV7" class="btn btn-outline-primary">Register</a>
+        </ol>
+    </div>
+    </section><br><br>
+
+    <div class="container">
+        <h3>
+            <center> EVENT SCHEDULE </center>
+        </h3>
+        <div class="table-responsive">
+            <table class="table table-striped table-sm">
+                <thead>
+                    <tr class="tt">
+                        <th>Events</th>
+                        <th>TIME </th>
+                        <th>VENUE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tf">
+                        <td>Solo dance</td>
+                        <td>10:00-11:00</td>
+                        <td>Auditorium</td>
+
+                    </tr>
+                    <tr class="tfs">
+                        <td>Collage</td>
+                        <td>11:30 - 12:30</td>
+                        <td>Pg block basement</td>
+
+                    </tr>
+                    <tr class="tf">
+                        <td>Solo Singing</td>
+                        <td>11:00 - 12:00</td>
+                        <td>D21</td>
+
+                    </tr>
+                    <tr class="tfs">
+                        <td>Duet dance</td>
+                        <td>11:00 - 12:00</td>
+                        <td>Auditorium</td>
+
+                    </tr>
+                    <tr class="tf">
+                        <td>Mehendi</td>
+                        <td>12:30 - 1:30</td>
+                        <td>D13</td>
+
+                    </tr>
+                    <tr class="tfs">
+                        <td>Pot Painting</td>
+                        <td>12:30 - 1:30</td>
+                        <td>Stone Bench</td>
+
+                    </tr>
+                    <tr class="tf">
+                        <td>Group singing</td>
+                        <td>12:00 - 1:00</td>
+                        <td>D21</td>
+
+                    </tr>
+                    <tr class="tfs">
+                        <td>Sketching</td>
+                        <td>10:30 - 11:30</td>
+                        <td>D13</td>
+
+                    </tr>
+                    <tr class="tf">
+                        <td>Group dance</td>
+                        <td>12:00 - 1:00</td>
+                        <td>Auditorium</td>
+
+                    </tr>
+                    <tr class="tfs">
+                        <td>Face Painting</td>
+                        <td>10:30 - 11:30</td>
+                        <td>Stone Bench</td>
+
+                    </tr>
+                    <tr class="tf">
+                        <td>Stand Up Comedy</td>
+                        <td>1:00 - 2:00</td>
+                        <td>Auditorium</td>
+
+                    </tr>
+                    <tr class="tfs">
+                        <td>Tshirt painting</td>
+                        <td>2:00 - 3:00</td>
+                        <td>D13</td>
+
+                    </tr>
+                    <tr class="tf">
+                        <td>Fashion show</td>
+                        <td>2:00 onwards</td>
+                        <td>Auditorium</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="parallax">
+        <style>
+            .parallax {
+                background-image: url("{% static 'images/o.jpg' %}");
+                height: 200px;
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                /* Stack items vertically */
+                justify-content: center;
+                /* Center items vertically */
+                align-items: center;
+                /* Center items horizontally */
+            }
+        </style>
+        <div class="container section">
+            <h4><i>Ticking Away the moments Until FEB 28, 2025!</i></h4>
+            <div class="countdown" id="countdown"></div>
+        </div>
+    </div>
+
+    <div class="contact-container">
+        <style>
+            .contact-container {
+                display: flex;
+                justify-content: space-between;
+                margin: 10px;
+                background-image:url("{% static 'images/hello.jpg' %}");
+            }
+        </style>
+        <div class="contact-details">
+            <h5>STUDENT CO-ORDINATOR'S</h5>
+            <p>Mehdee Khanum:<a href="tel:++919148925063">+919148925063</a></p>
+            <p>Lahari.D:<a href="tel:+919164391399">+919164391399</a></p>
+            <p>Bhavanisha.K:<a href="tel:+919738915751">+919738915751</a></p>
+        </div>
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2593.745656345036!2d77.58972274828079!3d12.988396454854318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16698d3761c1%3A0xe2f6393358679b12!2sSt%20Anne&#39;s%20First%20Grade%20College%20For%20Women!5e0!3m2!1sen!2sin!4v1714552513029!5m2!1sen!2sin"
+                width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+    <div class="cent">
+        <style>
+            .cent {
+                text-align: center;
+                color: aqua;
+                background-image: url("{% static 'images/12.webp' %}");
+                /* Change to your desired color */
+                padding: 10px;
+                margin: 5px;
+                /* Space around the paragraph */
+                border-radius: 8px;
+                /* Rounded corners for the paragraph */
+            }
+        </style>
+        <p>Designed and Developed By Rabecca.S (Media Secretary)</p>
+    </div>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>
