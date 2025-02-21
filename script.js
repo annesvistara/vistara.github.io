@@ -1,7 +1,7 @@
 
 // Set the date of the event you are counting down to
 // Set the date of the event you are counting down to (Year, Month, Day)
-const eventDate = new Date(2025, 2, 28); // Note: Months are 0-indexed in JavaScript
+const eventDate = new Date(2025, 1, 28); // Note: Months are 0-indexed in JavaScript
 
 function updateCountdown() {
     const currentDate = new Date();
